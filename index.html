@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conferência da urna · Caso compasso · urnasbr.com</title>
+<meta name="description" content="Confira no seu computador o registro oficial de uma urna de 2026, baixado do TSE: código SHA-512, assinatura da urna e as sequências de votos seguidos com o mesmo tempo.">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="topo"><div class="largura">
+  <a class="marca" href="https://urnasbr.com">urnasbr.com <span>Caso compasso</span></a>
+</div></header>
+
+<main class="largura">
+  <h1>Conferência da urna</h1>
+  <p class="abertura">Baixe no site do TSE o registro interno de uma urna das eleições de 2026 e solte aqui. Este programa roda só no seu computador: confere o código do arquivo, abre o registro e refaz a conta do dia inteiro. Não manda o arquivo para lugar nenhum e não pede nada à internet.</p>
+
+  <section class="caso" aria-labelledby="caso-titulo">
+    <h2 id="caso-titulo">O caso compasso, em votos</h2>
+    <p>Em cada urna do Brasil, a conta separa os votos que vieram em sequência: 2 votos ou mais seguidos com exatamente o mesmo tempo entre eles. Há duas formas de medir o tempo de cada eleitor: do voto gravado até o próximo voto gravado (voto a voto) e do título digitado até o próximo título digitado (título a título). Cada voto entra numa conta só, então as duas somam.</p>
+    <div class="tabela-rolagem">
+      <table class="cartoes">
+        <thead><tr><th>Turno</th><th class="n">Urnas no arquivo do TSE</th><th class="n">Votos em sequência, voto a voto</th><th class="n">Votos em sequência, título a título</th><th class="n">Os dois somados</th></tr></thead>
+        <tbody>
+          <tr><th data-rotulo="Turno">1º turno, 4 de outubro</th><td class="n" data-rotulo="Urnas no arquivo do TSE">499.176</td><td class="n" data-rotulo="Voto a voto">2.307.975</td><td class="n" data-rotulo="Título a título">2.158.991</td><td class="n forte" data-rotulo="Os dois somados">4.466.966</td></tr>
+          <tr><th data-rotulo="Turno">2º turno, 25 de outubro</th><td class="n" data-rotulo="Urnas no arquivo do TSE">499.177</td><td class="n" data-rotulo="Voto a voto">2.674.153</td><td class="n" data-rotulo="Título a título">2.509.808</td><td class="n forte" data-rotulo="Os dois somados">5.183.961</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="nota">Fonte: urnasbr.com, contagem de 29 de outubro de 2026 sobre o pacote oficial do TSE dos dois turnos. A comparação de cada urna com a coincidência está no site.</p>
+  </section>
+
+  <section aria-labelledby="como-titulo">
+    <h2 id="como-titulo">Como conferir uma urna</h2>
+    <ol class="como">
+      <li><b>Ache o arquivo da urna.</b> Em <a href="https://urnasbr.com/conferencia/">urnasbr.com/conferencia</a>, procure a sua cidade, escola ou título de eleitor; a ficha da urna tem o link do arquivo no site do TSE. Ou baixe o pacote do estado direto do TSE (é grande, de centenas de MB a alguns GB):
+        <code class="endereco">https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/arqurnatot/bu_imgbu_logjez_rdv_vscmr_2026_<b>2t</b>_<b>DF</b>.zip</code>
+        Troque <b>2t</b> por <b>1t</b> para o 1º turno e <b>DF</b> pela sigla do estado (ZZ é o exterior). Dentro do pacote, o registro de cada urna é o arquivo que termina em <code>-log.jez</code>.</li>
+      <li><b>Solte o arquivo aqui embaixo.</b> Para conferir também a assinatura da urna, solte junto o arquivo de mesmo nome que termina em <code>-vota.vsc</code>.</li>
+      <li><b>Compare.</b> O código SHA-512 e as sequências que aparecem aqui têm que ser os mesmos da ficha da urna em urnasbr.com.</li>
+    </ol>
+  </section>
+
+  <section class="conferir" id="conferir" aria-label="Conferir um arquivo"></section>
+</main>
+
+<footer class="rodape"><div class="largura">
+  <p>Ferramenta do <b>Caso compasso</b>, de <a href="https://urnasbr.com">urnasbr.com</a>. Site independente: não é do governo nem do TSE. Os dados são os oficiais do TSE.</p>
+  <p>Pode copiar, mudar e pôr em qualquer site, desde que cite a origem: <b>urnasbr.com — Caso compasso</b>.</p>
+</div></footer>
+<script src="conferir.js"></script>
+</body>
+</html>
